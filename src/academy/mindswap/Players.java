@@ -81,20 +81,26 @@ public class Players {
             switch (player.typeOfHand + player2.typeOfHand) {
                 case 3 -> {
                     if (player.typeOfHand == 2) {
+                        player.setGamesWon(1);
                         return 1;
                     }
+                    player2.setGamesWon(1);
                     return 2;
                 }
                 case 4 -> {
                     if (player.typeOfHand == 1) {
+                        player.setGamesWon(1);
                         return 1;
                     }
+                    player2.setGamesWon(1);
                     return 2;
                 }
                 case 5 -> {
                     if (player.typeOfHand == 3) {
+                        player2.setGamesWon(1);
                         return 2;
                     }
+                    player.setGamesWon(1);
                     return 1;
                 }
             }
